@@ -1,0 +1,31 @@
+Agile\AdminBundle\Entity\Catalog:
+    type: entity
+    table: catalog
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 归属目录编号
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 归属目录名称
+        absolute:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 归属目录简写代号
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 添加时间
+    lifecycleCallbacks: {  }

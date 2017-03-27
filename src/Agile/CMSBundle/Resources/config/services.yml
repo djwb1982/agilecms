@@ -1,0 +1,16 @@
+services:
+#    agile_cms.example:
+#        class: Agile\CMSBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+   #归属目录操作
+   cms_catalog:
+      class: Agile\CMSBundle\Repository\CatalogRepository
+      arguments: ["@doctrine.orm.entity_manager", "@service_container"]
+   #分类操作
+   cms_infoclass:
+       class: Agile\CMSBundle\Repository\InfoClassRepository
+       arguments: ["@doctrine.orm.entity_manager", "@service_container"]
+   #附件操作
+   cms_file:
+       class: Agile\CMSBundle\Repository\FileRepository
+       arguments: ["@doctrine.orm.entity_manager", "@service_container"]

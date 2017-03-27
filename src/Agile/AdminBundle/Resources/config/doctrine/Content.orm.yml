@@ -1,0 +1,61 @@
+Agile\AdminBundle\Entity\Content:
+    type: entity
+    table: content
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 内容
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 内容标题
+        content:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+            comment: 内容
+        coverimg:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 封面图片
+        img:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+            comment: 图片
+        tags:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 标签
+        class:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 分类名称
+        classid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 分类编号
+        catalog:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 归属目录名称
+    lifecycleCallbacks: {  }

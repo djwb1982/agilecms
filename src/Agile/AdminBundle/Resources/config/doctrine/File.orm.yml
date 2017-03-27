@@ -1,0 +1,43 @@
+Agile\AdminBundle\Entity\File:
+    type: entity
+    table: file
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件
+            default: '0'
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        filename:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        filepath:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 附件路径
+        suffix:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 文件后缀
+        size:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 文件大小
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 创建时间
+    lifecycleCallbacks: {  }

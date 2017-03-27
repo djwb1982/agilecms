@@ -1,0 +1,47 @@
+Agile\AdminBundle\Entity\Infoclass:
+    type: entity
+    table: infoclass
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类编号
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        bigclassid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 大类编号(为0，则是一级分类)
+        bigclassname:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 大类名称(为空，则是一级分类)
+        name:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 分类名称
+        catalogid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 归属目录编号
+        catalog:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 归属目录
+        addupdate:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 创建时间
+    lifecycleCallbacks: {  }

@@ -1,0 +1,10 @@
+services:
+    agile.admin.catalog:
+        class: Agile\AdminBundle\admin\CatalogAdmin
+        arguments: [~, Agile\AdminBundle\Entity\Catalog, ~]
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: "news"
+              label_catalogue: "AgileAdminBundle"
+              label: "归属模块" 

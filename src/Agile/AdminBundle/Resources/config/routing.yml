@@ -1,0 +1,3 @@
+agile_admin_homepage:
+    path:     /catalog/insert
+    defaults: { _controller: AgileAdminBundle:Default:index }

@@ -1,0 +1,18 @@
+#归属项新增
+agile_cms_catalog_admin_insert:
+    path:     /admin/catalog/insert
+    defaults: { _controller: AgileCMSBundle:CataLog:AdminInsert }
+#归属项更新
+agile_cms_catalog_admin_update:
+    path:     /admin/catalog/update/
+    defaults: { _controller: AgileCMSBundle:CataLog:AdminUpdate }
+#归属项列表
+agile_cms_catalog_admin_list:
+    path:     /admin/catalog/list/{page}
+    defaults: { _controller: AgileCMSBundle:CataLog:AdminList, page: 1}
+    requirements:
+            page: \d+
+#归属项删除
+agile_cms_catalog_admin_delete:
+    path:     /admin/catalog/delete/{id}
+    defaults: { _controller: AgileCMSBundle:CataLog:AdminDelete }
