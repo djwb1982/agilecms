@@ -14,3 +14,13 @@ services:
    cms_file:
        class: Agile\CMSBundle\Repository\FileRepository
        arguments: ["@doctrine.orm.entity_manager", "@service_container"]
+   #后台归属模块
+   agile.admin.catalog:
+       class: Agile\CMSBundle\admin\CatalogAdmin
+       arguments: [~, Agile\CMSBundle\Entity\Catalog, ~]
+       tags:
+           - name: sonata.admin
+             manager_type: orm
+             group: "news"
+             label_catalogue: "AgileCMSBundle"
+             label: "归属模块"
